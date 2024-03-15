@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <survey>
+ 	<title>MSME AUDIT</title>
+ 	<description>MSME AUDIT MSME AUDIT MSME AUDIT MSME AUDIT MSME AUDIT MSME AUDIT </description>
+    <start_dare>2021-08-08</start_dare>
+    <end_date>2022-08-08</end_date>
+    <questions_group>
+    	<serial_number>1</serial_number>
+    	<title>General Data (please tick)</title>
+    	<description>General Data General Data (please tick) General Data (please tick)</description>
+    	<question>
+    		<serial_number>1</serial_number>
+    		<title>Date Of Interview</title>
+    		<answer>
+    		  <type>date</type>
+    		</answer>
+    	</question>
+    	<question>
+    		<serial_number>2</serial_number>
+    		<title>Tehsil</title>
+    		<answer>
+    		  <type>text</type>
+    		</answer>
+    	</question>
+    	<question>
+    		<serial_number>3</serial_number>
+    		<title>Location</title>
+    		<answer>
+    		  <type>radio</type>
+    		  <options>
+    		  	 <option>
+    		  	 	<title>Rural</title>
+     		  	 </option>
+    		  	 <option>
+    		  	 	<title>Urban</title>
+    		  	 </option>
+    		  </options>
+    		</answer>
+    	</question>
+    	<question>
+    		<serial_number>4</serial_number>
+    		<title>Establishment Address</title>
+    		<answer>
+    		  <type>textarea</type>
+    		</answer>
+    	</question>
+    	<question>
+    		<serial_number>5</serial_number>
+    		<title>Name of the Owner</title>
+    		<answer>
+    		  <required>true</required>	
+    		  <type>text</type>
+    		</answer>
+    	</question>
+        <question>
+    		<serial_number>6</serial_number>
+    		<title>Gender</title>
+    		<answer>
+    		  <type>radio</type>
+    		  <options>
+    		  	 <option>
+    		  	 	<title>Male</title>
+     		  	 </option>
+    		  	 <option>
+    		  	 	<title>Female</title>
+    		  	 </option>
+    		  </options>
+    		</answer>
+    	</question>
+        <question>
+    		<serial_number>7</serial_number>
+    		<title>Udyog Registered:</title>
+    		<answer>
+    		  <type>radio</type>
+    		  <options>
+    		  	 <option>
+    		  	 	<title>Yes</title>
+     		  	 </option>
+    		  	 <option>
+    		  	 	<title>No</title>
+    		  	 </option>
+    		  </options>
+    		</answer>
+    	</question>
+    	 <question>
+    		<serial_number>8</serial_number>
+    		<title>If yes Number</title>
+    		<answer>
+     		  <type>text</type>
+    		</answer>
+    	</question>
+    	<question>
+    		<serial_number>9</serial_number>
+    		<title>Class:</title>
+    		<answer>
+    		  <type>radio</type>
+    		  <options>
+    		  	 <option>
+    		  	 	<title>Manufacturing</title>
+     		  	 </option>
+    		  	 <option>
+    		  	 	<title>Services</title>
+    		  	 </option>
+    		  	 <option>
+    		  	 	<title>Other</title>
+    		  	 </option>
+    		  </options>
+    		</answer>
+    	</question>
+    	<question>
+    		<serial_number>10</serial_number>
+    		<title>Sector</title>
+    		<answer>
+    		  <type>droodown</type>
+    		  <options>
+    		  	 <option>
+    		  	 	<title>Repairing & Services</title>
+     		  	 </option>
+    		  	 <option>
+    		  	 	<title>Food products</title>
+    		  	 </option>
+    		  	 <option>
+    		  	 	<title>Hosiery Garments</title>
+    		  	 </option>
+    		  
+    		   <option>
+    		  	 	<title>Wood products</title>
+    		  	 </option>
+    		  
+               <option>
+    		  	 	<title>Metal products</title>
+    		  	 </option>
+    		  
+               <option>
+    		  	 	<title>Leather products</title>
+    		  	 </option>
+    		  
+               <option>
+    		  	 	<title>Wool Silk and Synthetic Fibre Textile</title>
+    		  	 </option>
+    		  
+               <option>
+    		  	 	<title>Machinery & Part except electrical</title>
+    		  	 </option>
+    		 
+               <option>
+    		  	 	<title>Paper products & printin</title>
+    		  	 </option>
+    		
+               <option>
+    		  	 	<title>Cotton textiles</title>
+    		  	 </option>
+    		  
+               <option>
+    		  	 	<title>Chemical and Chemical products</title>
+    		  	 </option>
+    		 
+              <option>
+    		  	 	<title>Miscellaneous manufacturing</title>
+    		  	 </option>
+    	 
+              <option>
+    		  	 	<title>Rubber and Plastic products</title>
+    		  	 </option>
+    		   
+              <option>
+    		  	 	<title>Basic metal industries</title>
+    		  	 </option>
+               <option>
+    		  	 	<title>Jute and other textiles</title>
+    		  	 </option>
+               <option>
+    		  	 	<title>Beverages</title>
+    		  	 </option>
+               <option>
+    		  	 	<title>Tobacco and Tobacco products</title>
+    		  	 </option>
+               <option>
+    		  	 	<title>Transport equipment</title>
+    		  	 </option>
+               <option>
+    		  	 	<title>Others: Please specify</title>
+    		  	 </option>
+    		  </options>
+    		</answer>
+    	</question>
+    	 <question>
+    		<serial_number>11</serial_number>
+    		<title>Year of Establishment:</title>
+    		<answer>
+     		  <type>text</type>
+    		</answer>
+    	</question>
+    </questions_group>
+    <questions_group>
+    	<serial_number>2</serial_number>
+    	<title>Details of the Business (please tick)</title>
+    	<description>Details of the Business (please tick) Details of the</description>
+    	 <question>
+    		<serial_number>12</serial_number>
+    		<title>Name of Business:</title>
+    		<answer>
+    		  <type>text</type>
+    		</answer>
+    	</question>
+    	<question>
+    		<serial_number>13</serial_number>
+    		<title>Business Premises</title>
+    		<answer>
+    		  <type>radio</type>
+    		  <options>
+    		  	 <option>
+    		  	 	<title>Within household premises</title>
+     		  	 </option>
+    		  	 <option>
+    		  	 	<title>Parmanent setup</title>
+    		  	 </option>
+    		  	  <option>
+    		  	 	<title>On Rent</title>
+    		  	 </option>
+    		  </options>
+    		</answer>
+    	</question>
+    	<question>
+    		<serial_number>14</serial_number>
+    		<title>Type of Unit</title>
+    		<answer>
+    		  <type>radio</type>
+    		  <options>
+    		  	 <option>
+    		  	 	<title>Micro</title>
+     		  	 </option>
+    		  	 <option>
+    		  	 	<title>Small</title>
+    		  	 </option>
+    		  	  <option>
+    		  	 	<title>Mini</title>
+    		  	 </option>
+    		  </options>
+    		</answer>
+    	</question>
+    	<question>
+    		<serial_number>15</serial_number>
+    		<title>Type of Organizatio</title>
+    		<answer>
+    		  <type>radio</type>
+    		  <options>
+    		  	 <option>
+    		  	 	<title>Proprietorship</title>
+     		  	 </option>
+    		  	 <option>
+    		  	 	<title>Hindu Undivided family</title>
+    		  	 </option>
+    		  	  <option>
+    		  	 	<title>Partnership Firm</title>
+    		  	 </option>
+    		  	 <option>
+    		  	 	<title>Limited Liability Partnership</title>
+     		  	 </option>
+    		  	 <option>
+    		  	 	<title>Co operative Society</title>
+    		  	 </option>
+    		  	  <option>
+    		  	 	<title>Private Limited</title>
+    		  	 </option>
+    		  	 <option>
+    		  	 	<title>Public Limited</title>
+     		  	 </option>
+    		  	 <option>
+    		  	 	<title>Self-help group So</title>
+    		  	 </option>
+    		  	  <option>
+    		  	 	<title>Society</title>
+    		  	 </option>
+    		  	 <option>
+    		  	 	<title>Trust</title>
+    		  	 </option>
+    		  </options>
+    		</answer>
+    	</question>
+        <question>
+    		<serial_number>16</serial_number>
+    		<title>Nature of Operation</title>
+    		<answer>
+    		  <type>radio</type>
+    		  <options>
+    		  	 <option>
+    		  	 	<title>Perennial</title>
+     		  	 </option>
+    		  	 <option>
+    		  	 	<title>Seasonal</title>
+    		  	 </option>
+    		  	  <option>
+    		  	 	<title>Casual</title>
+    		  	 </option>
+    		  </options>
+    		</answer>
+    	</question>
+    	 <question>
+    		<serial_number>17</serial_number>
+    		<title>Employee Size 2016-17</title>
+    		<answer>
+    		  <type>text</type>
+    		</answer>
+    	</question>
+    	  <question>
+    		<serial_number>18</serial_number>
+    		<title>Employee Size 2016-17</title>
+    		<answer>
+    		  <type>text</type>
+    		</answer>
+    	</question>
+    	  <question>
+    		<serial_number>19</serial_number>
+    		<title>Employee Size 2016-17</title>
+    		<answer>
+    		  <type>text</type>
+    		</answer>
+    	</question>
+    </questions_group>
+ </survey>

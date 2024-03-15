@@ -1,0 +1,774 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+
+use App\Models\Survey;
+use App\Models\Question_group;
+use App\Models\Question;
+use App\Models\Option;
+use App\Models\User;
+use App\Models\Survey_result;
+use App\Models\Survey_answer;
+use App\Models\Image;
+
+
+
+
+class SurveyController extends Controller
+{
+    
+    public function dashboard(Request $request){
+    	  $data= $request->input();
+    	  $surveys=Survey_result::where('surveyor_id',$data['user_id'])->count(); 
+          $Survey_result_month=  Survey_result::whereMonth('created_at', date('m'))
+                        ->whereYear('created_at', date('Y'))
+                        ->count();
+          $Survey_result_today=Survey_result::whereDate('created_at', '=', date('Y-m-d'))
+                        ->count();
+                        
+                        
+           $now = \Carbon\Carbon::now();
+           $weekStart = $now->subDays($now->dayOfWeek)->setTime(0, 0);
+           $Survey_result_week=Survey_result::where('created_at', '>=', $weekStart)->count();             
+                        
+     	  
+    	  return response()->json([
+			            'message' => '',
+			            'data' => ['surveys'=>$surveys,'today'=>$Survey_result_today,'week'=>$Survey_result_week,'month'=>$Survey_result_month],
+			            'isError' => false,
+			            'responseCode'=>200
+			        ], 200);
+    } 
+
+
+    public function getSurveyList(Request $request){
+        $data=$request->input();
+       // $user_id = $data['user_id']; 
+        $today=date('Y-m-d');
+        $Survey=Survey:: whereDate('start_date','<=', $today)
+                 ->whereDate('end_date','>=', $today)
+                 ->get();
+            return response()->json([
+                  'message' => 'Successfull',
+                  'data' => $Survey,
+                  'isError' => false,
+                  'responseCode'=>200
+              ], 200);     
+                 
+    }
+	public function getSurvey(Request $request){
+	    $data=$request->input();
+	    
+	    
+        $auth_token=$data['auth_token'];
+        $Survey=Survey::where('auth_token',$auth_token)->first();
+        $Survey->questions_group_count=Question_group::where('survey_id',$Survey->id)->count();
+        $Survey->questions_group=Question_group::where('survey_id',$Survey->id)->get();
+         
+        foreach($Survey->questions_group as $g){
+          $g->question=Question::where('survey_id',$Survey->id)->where('question_group_id',$g->id)->get();
+          foreach($g->question as $q){
+            if($q->type=='radio'|| $q->type=='checkbox' ||$q->type=='select'){
+               $q->options=Option::where('survey_id',$Survey->id)->where('question_group_id',$g->id)->where('question_id',$q->id)->get();
+            }
+          }
+        } 
+        
+        
+        
+
+  
+		 return response()->json([
+			            'message' => '',
+			            'data' => $Survey,
+			            'isError' => false,
+			            'responseCode'=>200
+			        ], 200);
+
+	}
+
+
+
+
+public function createSurvey(){
+   try {
+     $json= '{
+  "survey": {
+    "title": "MSME AUDIT",
+    "description": "MSME AUDIT MSME AUDIT MSME AUDIT MSME AUDIT MSME AUDIT MSME AUDIT",
+    "start_date": "2021-08-08",
+    "end_date": "2022-08-08",
+    "questions_group_count": 3,
+    "questions_group": [
+      {
+        "id": 1,
+        "title": "General Data (please tick)",
+        "description": "General Data General Data (please tick) General Data (please tick)",
+        "question": [
+          {
+            "id": 1,
+            "title": "Date Of Interview",
+            "type": "date",
+            "answer": {
+              
+            }
+          },
+          {
+            "id": 2,
+            "title": "Tehsil",
+            "type": "text",
+            "answer": {
+              
+            }
+          },
+          {
+            "id": 3,
+            "title": "Location",
+            "type": "radio",
+            "answer": {
+              
+              "options": {
+                "option": [
+                  {
+                    "title": "Rural"
+                  },
+                  {
+                    "title": "Urban"
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "id": 4,
+            "title": "Establishment Address",
+            "type": "textarea",
+            "answer": {
+              
+            }
+          },
+          {
+            "id": 5,
+            "title": "Name of the Owner",
+            "type": "text",
+            "required": "true",
+            "answer": {
+              
+             }
+          },
+          {
+            "id": 6,
+            "title": "Gender",
+            "type": "radio",
+            "answer": {
+              
+              "options": {
+                "option": [
+                  {
+                    "title": "Male"
+                  },
+                  {
+                    "title": "Female"
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "id": 7,
+            "title": "Udyog Registered:",
+            "type": "radio",
+            "answer": {
+              
+              "options": {
+                "option": [
+                  {
+                    "title": "Yes"
+                  },
+                  {
+                    "title": "No"
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "id": 8,
+            "title": "If yes Number",
+            "type": "text",
+            "answer": {
+              
+            }
+          },
+          {
+            "id": 9,
+            "title": "Class:",
+            "type": "radio",
+            "answer": {
+              
+              "options": {
+                "option": [
+                  {
+                    "title": "Manufacturing"
+                  },
+                  {
+                    "title": "Services"
+                  },
+                  {
+                    "title": "Other"
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "id": 10,
+            "title": "Sector",
+            "type": "radio",
+            "answer": {
+              "options": {
+                "option": [
+                  {
+                    "title": "Repairing & Services"
+                  },
+                  {
+                    "title": "Food products"
+                  },
+                  {
+                    "title": "Hosiery Garments"
+                  },
+                  {
+                    "title": "Wood products"
+                  },
+                  {
+                    "title": "Metal products"
+                  },
+                  {
+                    "title": "Leather products"
+                  },
+                  {
+                    "title": "Wool Silk and Synthetic Fibre Textile"
+                  },
+                  {
+                    "title": "Machinery & Part except electrical"
+                  },
+                  {
+                    "title": "Paper products & printin"
+                  },
+                  {
+                    "title": "Cotton textiles"
+                  },
+                  {
+                    "title": "Chemical and Chemical products"
+                  },
+                  {
+                    "title": "Miscellaneous manufacturing"
+                  },
+                  {
+                    "title": "Rubber and Plastic products"
+                  },
+                  {
+                    "title": "Basic metal industries"
+                  },
+                  {
+                    "title": "Jute and other textiles"
+                  },
+                  {
+                    "title": "Beverages"
+                  },
+                  {
+                    "title": "Tobacco and Tobacco products"
+                  },
+                  {
+                    "title": "Transport equipment"
+                  },
+                  {
+                    "title": "Others: Please specify"
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "id": 11,
+            "title": "Year of Establishment:",
+            "type": "text",
+            "answer": {
+              
+            }
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "title": "Details of the Business (please tick)",
+        "description": "Details of the Business (please tick) Details of the",
+        "question": [
+          {
+            "id": 12,
+            "title": "Name of Business:",
+            "type": "text",
+            "answer": {
+              
+            }
+          },
+          {
+            "id": 13,
+            "title": "Business Premises",
+            "type": "radio",
+            "answer": {
+              
+              "options": {
+                "option": [
+                  {
+                    "title": "Within household premises"
+                  },
+                  {
+                    "title": "Parmanent setup"
+                  },
+                  {
+                    "title": "On Rent"
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "id": 14,
+            "title": "Type of Unit",
+            "type": "radio",
+            "answer": {
+              
+              "options": {
+                "option": [
+                  {
+                    "title": "Micro"
+                  },
+                  {
+                    "title": "Small"
+                  },
+                  {
+                    "title": "Mini"
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "id": 15,
+            "title": "Type of Organizatio",
+            "type": "radio",
+            "answer": {
+             
+              "options": {
+                "option": [
+                  {
+                    "title": "Proprietorship"
+                  },
+                  {
+                    "title": "Hindu Undivided family"
+                  },
+                  {
+                    "title": "Partnership Firm"
+                  },
+                  {
+                    "title": "Limited Liability Partnership"
+                  },
+                  {
+                    "title": "Co operative Society"
+                  },
+                  {
+                    "title": "Private Limited"
+                  },
+                  {
+                    "title": "Public Limited"
+                  },
+                  {
+                    "title": "Self-help group So"
+                  },
+                  {
+                    "title": "Society"
+                  },
+                  {
+                    "title": "Trust"
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "id": 16,
+            "title": "Nature of Operation",
+            "type": "radio",
+            "answer": {
+              
+              "options": {
+                "option": [
+                  {
+                    "title": "Perennial"
+                  },
+                  {
+                    "title": "Seasonal"
+                  },
+                  {
+                    "title": "Casual"
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "id": 17,
+            "title": "Employee Size 2016-17",
+            "type": "text",
+            "answer": {
+              
+            }
+          },
+          {
+            "id": 18,
+            "title": "Employee Size 2016-17",
+            "type": "text",
+            "answer": {
+              
+            }
+          },
+          {
+            "id": 19,
+            "title": "Employee Size 2016-17",
+            "type": "text",
+            "answer": {
+              
+            }
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "title": "Last General Data (please tick)",
+        "description": "General Data General Data (please tick) General Data (please tick)",
+        "question": [
+          {
+            "id": 20,
+            "title": "Date Of Interview",
+            "type": "date",
+            "answer": {
+              
+            }
+          },
+          {
+            "id": 21,
+            "title": "last question",
+            "type": "text",
+            "answer": {
+              
+            }
+          },
+          {
+            "id": 22,
+            "title": "upload photo",
+            "type": "photo",
+            "answer": {
+              
+            }
+          }
+        ]
+      }
+    ]
+  }
+}'; 
+echo "<pre>";
+error_reporting(1);
+$data= json_decode($json);
+ /////////////////////////////////////////////////////////////////////////////////Validation Start 
+ /////////////////////////////////////////////////////////////   
+       $validator=[];
+       $validator=[
+            'title'=>$survey->title,
+            'description'=>$survey->description,
+            'start_date'=>$survey->start_date,
+            'end_date'=>$survey->end_date,
+       ];
+       $validator['questions_group']= $survey->questionsnfgnf_group;
+       /// question_groups Table/////
+       foreach($validator['questions_group'] as $questions_group){
+          $validator_questions_group=   [
+                 'title'=>$questions_group->title,
+                'description'=>$questions_group->description
+              ];
+             /// questions Table/////
+             foreach($validator['questions_group']->question as $question){
+                       $created_question=[
+                          'title'=>$question->title ,
+                          'type'=>$question->type
+                        ];
+                        /// options Table/////
+                        if($validator['questions_group']->question->type=='radio'|| $validator['questions_group']->question->type=='checkbox' ||$validator['questions_group']->question->type=='select'){
+                               $options=$validator['questions_group']->question->answer->options->option;
+                                     foreach($options as $option ){
+                                          $created_option=[
+                                               'option_text'=>$option->title,
+                                              'option_value'=>$option->title
+                                            ];
+                                     }
+                        }
+              }
+       }
+ /////////////////////////////////////////////////////////////////////////////////Validation End 
+ ///////////////////////////////////////////////////////////// 
+ /////////////////////////////////////////////////////////////////////
+   $survey=($data->survey);
+       /// survey Table/////
+       $title= $survey->title;
+       $description= $survey->description;
+       $start_date= $survey->start_date;
+       $end_date= $survey->end_date;
+       $questions_groups= $survey->questions_group;
+
+       $created_survey= Survey::create([
+            'title'=>$title,
+            'description'=>$description,
+            'start_date'=>$start_date,
+            'end_date'=>$end_date,
+            'auth_token'=>$this->createUniqueId(20)
+       ]);
+       /// question_groups Table/////
+       foreach($questions_groups as $questions_group){
+            $created_questions_group= Question_group::create([
+                'survey_id'=>$created_survey->id,
+                'title'=>$questions_group->title,
+                'description'=>$questions_group->description
+             ]);
+
+             /// questions Table/////
+             foreach($questions_group->question as $question){
+                 $created_question= Question::create([
+                    'survey_id'=>$created_survey->id,
+                    'question_group_id'=>$created_questions_group->id,
+                    'title'=>$question->title ,
+                    'type'=>$question->type,
+                    'readonly'=>isset($question->readonly)?$question->readonly:'false',
+                    'required'=>isset($question->required)?$question->required:'false'
+                  ]);
+                        /// options Table/////
+                        if($created_question->type=='radio'|| $created_question->type=='checkbox' ||$created_question->type=='select'||              $created_question->type == 'dropdown'){
+                               $options=$question->answer->options->option;
+                                     foreach($options as $option ){
+                                          $created_option=Option::create([
+                                              'survey_id'=>$created_survey->id,
+                                              'question_group_id'=>$created_questions_group->id,
+                                              'question_id'=>$created_question->id,
+                                              'option_text'=>$option->title,
+                                              'option_value'=>$option->title
+                                            ]);
+                                     }
+                        }
+              }
+       }
+
+
+
+
+
+
+
+     return response()->json([
+                  'message' => '',
+                  'data' => json_decode($json),
+                  'isError' => false,
+                  'responseCode'=>200
+              ], 200);
+
+
+    } catch (Throwable $e) {
+        report($e);
+
+        return false;
+    }
+  }
+
+  public function submitAnswers(Request $request){
+    $data=$request->input();
+    
+    $user_id = $data['user_id']; 
+    $survey_id = $data['survey_id'];
+    $title = $data['title'];
+    $description = $data['description'];
+    $start_date = $data['start_date'];
+    $end_date = $data['end_date'];
+    $questions_groups = json_decode($data['questions_group']);
+    $lat = $data['lat'];
+    $lan = $data['lan'];
+    
+    $user=User::where('id',$user_id)->first();
+    if(!isset($user->id)){
+             return response()->json([
+                  'message' => 'Authentication faild',
+                  'data' => [],
+                  'isError' => true,
+                  'responseCode'=>402
+              ], 402);
+        
+    }
+    
+    
+        //Survey_result
+                    // 'surveyor_id',
+                    // 'survey_id',
+                    // 'lat',
+                    // 'lan',
+      
+        $Survey_result=Survey_result::create([
+            'surveyor_id'=>$user->id,
+            'survey_id'=>$survey_id,
+            'lat'=>$lat,
+            'lan'=>$lan
+        ]);
+ 
+        //Survey_answer
+                // 'survey_result_id',
+                // 'surveyor_id',
+                // 'survey_id',
+                // 'question_group_id',
+                // 'question_id',
+                // 'question',
+                // 'answer', 
+                // [survey_id] => 1
+                // [title] => General Data (please tick)
+                // [description] => General Data General Data (please tick) General Data (please tick)
+                // print_r($questions_group);
+    
+          foreach($questions_groups as $questions_group){
+              $survey_id=$questions_group->survey_id;
+              $title=$questions_group->title;
+              $survey_result_id=$Survey_result->id;
+              $questions=$questions_group->question;
+              foreach($questions as $question){
+                       Survey_answer::create([
+                            'survey_result_id'=>$survey_result_id,
+                            'surveyor_id'=>$user->id,
+                            'survey_id'=>$question->survey_id,
+                            'question_group_id'=>$question->question_group_id,
+                            'question_id'=>$question->id,
+                            'question'=>$question->title,
+                            'answer'=>isset($question->user_answer)?$question->user_answer:'',
+                        ]);
+              }
+          }
+          
+          return response()->json([
+                  'message' => 'Successfully Added',
+                  'data' => [],
+                  'isError' => false,
+                  'responseCode'=>200
+              ], 200);
+              
+  }
+
+
+
+public function imagesAll(Request $request){
+            $data=$request->input();
+            $user_id=$data['user_id'];
+             
+            $images= Image::where('user_id',$user_id)->paginate(10);
+	        return response()->json([
+	            'message' => 'All',
+	            'data' => $images,
+ 	            'isError' => false,
+	            'responseCode'=>200
+	        ], 200);
+ 
+}
+
+
+    
+ function uploads(Request $request){
+ 	        $data=$request->input();
+            $user_id= $data['user_id'];
+ 
+
+           if($request->has('file')) {
+                    $fileName = time().time().time().'.'.$request->file->extension();  
+                    $request->file->move(public_path('uploads/files'), $fileName); 
+                     
+
+
+			$filename_err = explode(".",$_FILES['file']['name']);
+			$filename_err_count = count($filename_err);
+			$file_ext = $filename_err[$filename_err_count-1];
+
+            $thumbnail = public_path('uploads/files/thumb/').$fileName;
+            $upload_image=public_path('uploads/files/').$fileName;
+            list($width,$height) = getimagesize($upload_image);
+
+              $ratio= $width/200;
+
+              $thumb_width=$width/$ratio;
+              $thumb_height=$height/$ratio;
+
+            $thumb_create = imagecreatetruecolor($thumb_width,$thumb_height);
+            switch($file_ext){
+                case 'jpg':
+                    $source = imagecreatefromjpeg($upload_image);
+                    break;
+                case 'jpeg':
+                    $source = imagecreatefromjpeg($upload_image);
+                    break;
+
+                case 'png':
+                    $source = imagecreatefrompng($upload_image);
+                    break;
+                case 'gif':
+                    $source = imagecreatefromgif($upload_image);
+                    break;
+                default:
+                    $source = imagecreatefromjpeg($upload_image);
+            }
+
+            imagecopyresized($thumb_create,$source,0,0,0,0,$thumb_width,$thumb_height,$width,$height);
+            // switch($file_ext){
+            //     case 'jpg' || 'jpeg':
+            //         imagejpeg($thumb_create,$thumbnail,100);
+            //         break;
+            //     case 'png':
+            //         imagepng($thumb_create,$thumbnail,100);
+            //         break;
+
+            //     case 'gif':
+            //         imagegif($thumb_create,$thumbnail,100);
+            //         break;
+            //     default:
+            //         imagejpeg($thumb_create,$thumbnail,100);
+            // }
+
+	          $image= Image::create([
+						'image'=> $fileName, 
+						//'thumb_image'=>'thumb/'.$fileName ,
+						'user_id'=> $user_id,
+	           ]);
+ 
+           
+
+              return response()->json([
+			            'message' =>  'done',
+			            'data' => $image,
+			            'isError' => false,
+			            'responseCode'=>200
+			        ], 200);
+
+            }
+
+		  
+ }
+ 
+ 
+  public  function createUniqueId( $delimiter = '-'){
+            $str= \Hash::make(uniqid(time(), true));
+            $slug = strtolower(trim(preg_replace('/[\s-]+/', $delimiter, preg_replace('/[^A-Za-z0-9-]+/', $delimiter, preg_replace('/[&]/', 'and', preg_replace('/[\']/', '', iconv('UTF-8', 'ASCII//TRANSLIT', $str))))), $delimiter));
+            return $slug.uniqid(time(), true);
+   }
+
+}

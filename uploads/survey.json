@@ -1,0 +1,1511 @@
+{
+  "survey": {
+    "title": "MSME SURVEY",
+    "description": "",
+    "start_date": "2021-07-28",
+    "end_date": "2021-08-28",
+    "questions_group": [
+      {
+        "title": "General Data",
+        "description": "",
+        "question": [
+          {
+            "title": "Tehsil",
+            "type": "text",
+            "readonly": false,
+            "required": true,
+            "answer": ""
+          },
+          {
+            "title": "District",
+            "type": "dropdown",
+            "readonly": false,
+            "required": true,
+            "answer": {
+              "options": {
+                "option": [
+                  {
+                    "title": "Agra"
+                  },
+                  {
+                    "title": "Aligarh"
+                  },
+                  {
+                    "title": "Allahabad"
+                  },
+                  {
+                    "title": "Ambedkar Nagar"
+                  },
+                  {
+                    "title": "Amethi"
+                  },
+                  {
+                    "title": "Amroha (J.P. Nagar)"
+                  },
+                  {
+                    "title": "Auraiya"
+                  },
+                  {
+                    "title": "Azamgarh"
+                  },
+                  {
+                    "title": "Baghpat"
+                  },
+                  {
+                    "title": "Bahraich"
+                  },
+                  {
+                    "title": "Ballia"
+                  },
+                  {
+                    "title": "Balrampur"
+                  },
+                  {
+                    "title": "Banda"
+                  },
+                  {
+                    "title": "Barabanki"
+                  },
+                  {
+                    "title": "Basti"
+                  },
+                  {
+                    "title": "Bhadohi"
+                  },
+                  {
+                    "title": "Bijnor"
+                  },
+                  {
+                    "title": "Budaun"
+                  },
+                  {
+                    "title": "Bulandshahr"
+                  },
+                  {
+                    "title": "Chandauli"
+                  },
+                  {
+                    "title": "Chitrakoot"
+                  },
+                  {
+                    "title": "Deoria"
+                  },
+                  {
+                    "title": "Etah"
+                  },
+                  {
+                    "title": "Etawah"
+                  },
+                  {
+                    "title": "Faizabad"
+                  },
+                  {
+                    "title": "Farrukhabad"
+                  },
+                  {
+                    "title": "Fatehpur"
+                  },
+                  {
+                    "title": "Firozabad"
+                  },
+                  {
+                    "title": "Gautam Buddha Nagar"
+                  },
+                  {
+                    "title": "Ghaziabad"
+                  },
+                  {
+                    "title": "Ghazipur"
+                  },
+                  {
+                    "title": "Gonda"
+                  },
+                  {
+                    "title": "Gorakhpur"
+                  },
+                  {
+                    "title": "Hamirpur"
+                  },
+                  {
+                    "title": "Hapur (Panchsheel Nagar)"
+                  },
+                  {
+                    "title": "Hardoi"
+                  },
+                  {
+                    "title": "Hathras"
+                  },
+                  {
+                    "title": "Jalaun"
+                  },
+                  {
+                    "title": "Jaunpur"
+                  },
+                  {
+                    "title": "Jhansi"
+                  },
+                  {
+                    "title": "Kannauj"
+                  },
+                  {
+                    "title": "Kanpur Dehat"
+                  },
+                  {
+                    "title": "Kanpur Nagar"
+                  },
+                  {
+                    "title": "Kanshiram Nagar (Kasganj)"
+                  },
+                  {
+                    "title": "Kaushambi"
+                  },
+                  {
+                    "title": "Kushinagar (Padrauna)"
+                  },
+                  {
+                    "title": "Lakhimpur - Kheri"
+                  },
+                  {
+                    "title": "Lalitpur"
+                  },
+                  {
+                    "title": "Lucknow"
+                  },
+                  {
+                    "title": "Maharajganj"
+                  },
+                  {
+                    "title": "Mahoba"
+                  },
+                  {
+                    "title": "Mainpuri"
+                  },
+                  {
+                    "title": "Mathura"
+                  },
+                  {
+                    "title": "Mau"
+                  },
+                  {
+                    "title": "Meerut"
+                  },
+                  {
+                    "title": "Mirzapur"
+                  },
+                  {
+                    "title": "Moradabad"
+                  },
+                  {
+                    "title": "Muzaffarnagar"
+                  },
+                  {
+                    "title": "Pilibhit"
+                  },
+                  {
+                    "title": "Pratapgarh"
+                  },
+                  {
+                    "title": "RaeBareli"
+                  },
+                  {
+                    "title": "Rampur"
+                  },
+                  {
+                    "title": "Saharanpur"
+                  },
+                  {
+                    "title": "Sambhal (Bhim Nagar)"
+                  },
+                  {
+                    "title": "Sant Kabir Nagar"
+                  },
+                  {
+                    "title": "Shahjahanpur"
+                  },
+                  {
+                    "title": "Shamali (Prabuddh Nagar)"
+                  },
+                  {
+                    "title": "Shravasti"
+                  },
+                  {
+                    "title": "Siddharth Nagar"
+                  },
+                  {
+                    "title": "Sitapur"
+                  },
+                  {
+                    "title": "Sonbhadra"
+                  },
+                  {
+                    "title": "Sultanpur"
+                  },
+                  {
+                    "title": "Unnao"
+                  },
+                  {
+                    "title": "Varanasi"
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "title": "Establishment Address",
+            "type": "textarea",
+            "readonly": false,
+            "required": true,
+            "answer": ""
+          },
+          {
+            "title": "Udyog Registered",
+            "unique_identifier": "udyog_registered",
+            "type": "radio",
+            "readonly": false,
+            "required": true,
+            "answer": {
+              "options": {
+                "option": [
+                  {
+                    "title": "Yes"
+                  },
+                  {
+                    "title": "No"
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "parent_question": "udyog_registered",
+            "show_when": "Yes",
+            "title": "If yes Number",
+            "type": "text",
+            "readonly": false,
+            "required": true,
+            "answer": ""
+          },
+          {
+            "title": "Class",
+            "type": "checkbox",
+            "readonly": false,
+            "required": true,
+            "answer": {
+              "options": {
+                "option": [
+                  {
+                    "title": "Manufacturing"
+                  },
+                  {
+                    "title": "Services"
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "title": "Sector",
+            "unique_identifier": "sector",
+            "type": "radio",
+            "readonly": false,
+            "required": true,
+            "answer": {
+              "options": {
+                "option": [
+                  {
+                    "title": "Repairing & Services"
+                  },
+                  {
+                    "title": "Food products"
+                  },
+                  {
+                    "title": "Hosiery Garments"
+                  },
+                  {
+                    "title": "Wood products"
+                  },
+                  {
+                    "title": "Metal products"
+                  },
+                  {
+                    "title": "Leather products"
+                  },
+                  {
+                    "title": "Wool Silk and Synthetic Fibre Textile"
+                  },
+                  {
+                    "title": "Machinery & Part except electrical"
+                  },
+                  {
+                    "title": "Other"
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "parent_question": "sector",
+            "show_when": "Other",
+            "title": "If Any Other Sector Please specify",
+            "type": "text",
+            "readonly": false,
+            "required": true,
+            "answer": ""
+          },
+          {
+            "title": "Year of Establishment",
+            "unique_identifier": "year_of_establishment",
+            "type": "year",
+            "readonly": true,
+            "required": true,
+            "answer": ""
+          }
+        ]
+      },
+      {
+        "title": "Details of the Business",
+        "description": "",
+        "question": [
+          {
+            "title": "Name of Business",
+            "type": "text",
+            "readonly": true,
+            "required": true,
+            "answer": ""
+          },
+          {
+            "title": "Type of Unit",
+            "type": "radio",
+            "readonly": false,
+            "required": true,
+            "answer": {
+              "options": {
+                "option": [
+                  {
+                    "title": "Micro"
+                  },
+                  {
+                    "title": "Small"
+                  },
+                  {
+                    "title": "Medium"
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "title": "Nature of Operation",
+            "type": "radio",
+            "readonly": false,
+            "required": true,
+            "answer": {
+              "options": {
+                "option": [
+                  {
+                    "title": "Perennial"
+                  },
+                  {
+                    "title": "Seasonal"
+                  },
+                  {
+                    "title": "Casual"
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "title": "Nature Of Job",
+            "type": "radio",
+            "readonly": false,
+            "required": true,
+            "answer": {
+              "options": {
+                "option": [
+                  {
+                    "title": "Unskilled"
+                  },
+                  {
+                    "title": "Semi-Skilled"
+                  },
+                  {
+                    "title": "Skilled"
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "title": "Nature Of Employment",
+            "type": "radio",
+            "readonly": false,
+            "required": true,
+            "answer": {
+              "options": {
+                "option": [
+                  {
+                    "title": "Permanent"
+                  },
+                  {
+                    "title": "Contractual"
+                  },
+                  {
+                    "title": "Skilled"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      {
+        "title": "Employee Size",
+        "description": "",
+        "question": [
+          {
+            "title": "2016-17",
+            "parent_question": "year_of_establishment",
+            "is_greater": 2016,
+            "type": "number",
+            "readonly": false,
+            "required": true,
+            "answer": ""
+          },
+          {
+            "title": "2017-18",
+            "parent_question": "year_of_establishment",
+            "is_greater": 2017,
+            "type": "number",
+            "readonly": false,
+            "required": true,
+            "answer": ""
+          },
+          {
+            "title": "2018-19",
+            "parent_question": "year_of_establishment",
+            "is_greater": 2018,
+            "type": "number",
+            "readonly": false,
+            "required": true,
+            "answer": ""
+          },
+          {
+            "title": "2019-20",
+            "parent_question": "year_of_establishment",
+            "is_greater": 2019,
+            "type": "number",
+            "readonly": false,
+            "required": true,
+            "answer": ""
+          },
+          {
+            "title": "2020-21",
+            "parent_question": "year_of_establishment",
+            "is_greater": 2020,
+            "type": "number",
+            "readonly": false,
+            "required": true,
+            "answer": ""
+          }
+        ]
+      },
+      {
+        "title": "Details of the Finances and Expenses",
+        "description": "Monthly Revenue/Earnings",
+        "question": [
+          {
+            "title": "2016-17",
+            "parent_question": "year_of_establishment",
+            "is_greater": 2016,
+            "type": "number",
+            "readonly": false,
+            "required": true,
+            "answer": ""
+          },
+          {
+            "title": "2017-18",
+            "parent_question": "year_of_establishment",
+            "is_greater": 2017,
+            "type": "number",
+            "readonly": false,
+            "required": true,
+            "answer": ""
+          },
+          {
+            "title": "2018-19",
+            "parent_question": "year_of_establishment",
+            "is_greater": 2018,
+            "type": "number",
+            "readonly": false,
+            "required": true,
+            "answer": ""
+          },
+          {
+            "title": "2019-20",
+            "parent_question": "year_of_establishment",
+            "is_greater": 2019,
+            "type": "number",
+            "readonly": false,
+            "required": true,
+            "answer": ""
+          },
+          {
+            "title": "2020-21",
+            "parent_question": "year_of_establishment",
+            "is_greater": 2020,
+            "type": "number",
+            "readonly": false,
+            "required": true,
+            "answer": ""
+          }
+        ]
+      },
+      {
+        "title": "Details of the Finances and Expenses",
+        "description": "Monthly  Cost",
+        "question": [
+          {
+            "title": "2016-17",
+            "parent_question": "year_of_establishment",
+            "is_greater": 2016,
+            "type": "number",
+            "readonly": false,
+            "required": true,
+            "answer": ""
+          },
+          {
+            "title": "2017-18",
+            "parent_question": "year_of_establishment",
+            "is_greater": 2017,
+            "type": "number",
+            "readonly": false,
+            "required": true,
+            "answer": ""
+          },
+          {
+            "title": "2018-19",
+            "parent_question": "year_of_establishment",
+            "is_greater": 2018,
+            "type": "number",
+            "readonly": false,
+            "required": true,
+            "answer": ""
+          },
+          {
+            "title": "2019-20",
+            "parent_question": "year_of_establishment",
+            "is_greater": 2019,
+            "type": "number",
+            "readonly": false,
+            "required": true,
+            "answer": ""
+          },
+          {
+            "title": "2020-21",
+            "parent_question": "year_of_establishment",
+            "is_greater": 2020,
+            "type": "number",
+            "readonly": false,
+            "required": true,
+            "answer": ""
+          }
+        ]
+      },
+      {
+        "title": "Details of the Bank Credit Facilitation and Utilization",
+        "description": "Loan Amount",
+        "question": [
+          {
+            "title": "2016-17",
+            "parent_question": "year_of_establishment",
+            "unique_identifier": "loan_amount_2016",
+            "is_greater": 2016,
+            "type": "number",
+            "readonly": false,
+            "answer": ""
+          },
+          {
+            "title": "2017-18",
+            "unique_identifier": "loan_amount_2017",
+            "parent_question": "year_of_establishment",
+            "is_greater": 2017,
+            "type": "number",
+            "readonly": false,
+            "answer": ""
+          },
+          {
+            "title": "2018-19",
+            "unique_identifier": "loan_amount_2018",
+            "parent_question": "year_of_establishment",
+            "is_greater": 2018,
+            "type": "number",
+            "readonly": false,
+            "answer": ""
+          },
+          {
+            "title": "2019-20",
+            "unique_identifier": "loan_amount_2019",
+            "parent_question": "year_of_establishment",
+            "is_greater": 2019,
+            "type": "number",
+            "readonly": false,
+            "answer": ""
+          },
+          {
+            "title": "2020-21",
+            "unique_identifier": "loan_amount_2020",
+            "parent_question": "year_of_establishment",
+            "is_greater": 2020,
+            "type": "number",
+            "readonly": false,
+            "answer": ""
+          }
+        ]
+      },
+      {
+        "title": "Details of the Bank Credit Facilitation and Utilization",
+        "description": "Bank Name",
+        "question": [
+          {
+            "title": "2016-17",
+            "parent_question": "loan_amount_2016",
+            "is_lesser": 1,
+            "type": "dropdown",
+            "readonly": false,
+            "required": true,
+            "answer": {
+              "options": {
+                "option": [
+                  {
+                    "title": "Aryavart Gramin Bank"
+                  },
+                  {
+                    "title": "Axis Bank"
+                  },
+                  {
+                    "title": "Bandhan Bank"
+                  },
+                  {
+                    "title": "Bank of Baroda"
+                  },
+                  {
+                    "title": "Bank of India"
+                  },
+                  {
+                    "title": "Bank of Maharastra"
+                  },
+                  {
+                    "title": "Baroda UP Gramin Bank"
+                  },
+                  {
+                    "title": "Canara Bank"
+                  },
+                  {
+                    "title": "Central Bank of India"
+                  },
+                  {
+                    "title": "HDFC Bank"
+                  },
+                  {
+                    "title": "ICICI Bank"
+                  },
+                  {
+                    "title": "IDBI Bank"
+                  },
+                  {
+                    "title": "Indian Bank (Allahabad Bank)"
+                  },
+                  {
+                    "title": "Indian Overseas Bank"
+                  },
+                  {
+                    "title": "Indus Ind Bank"
+                  },
+                  {
+                    "title": "J&K Bank"
+                  },
+                  {
+                    "title": "Karnataka Bank"
+                  },
+                  {
+                    "title": "Kotak Mahindra Bank"
+                  },
+                  {
+                    "title": "Nainital Bank"
+                  },
+                  {
+                    "title": "Punjab National Bank"
+                  },
+                  {
+                    "title": "Prathima Bank"
+                  },
+                  {
+                    "title": "Punjab & Sind Bank"
+                  },
+                  {
+                    "title": "State Bank of India"
+                  },
+                  {
+                    "title": "South Indian Bank"
+                  },
+                  {
+                    "title": "The Federal Bank"
+                  },
+                  {
+                    "title": "UCO Bank"
+                  },
+                  {
+                    "title": "Union Bank of India"
+                  },
+                  {
+                    "title": "UP Cooperative Bank"
+                  },
+                  {
+                    "title": "YES Bank"
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "title": "2017-18",
+            "parent_question": "loan_amount_2017",
+            "is_lesser": 1,
+            "type": "dropdown",
+            "readonly": false,
+            "required": true,
+            "answer": {
+              "options": {
+                "option": [
+                  {
+                    "title": "Aryavart Gramin Bank"
+                  },
+                  {
+                    "title": "Axis Bank"
+                  },
+                  {
+                    "title": "Bandhan Bank"
+                  },
+                  {
+                    "title": "Bank of Baroda"
+                  },
+                  {
+                    "title": "Bank of India"
+                  },
+                  {
+                    "title": "Bank of Maharastra"
+                  },
+                  {
+                    "title": "Baroda UP Gramin Bank"
+                  },
+                  {
+                    "title": "Canara Bank"
+                  },
+                  {
+                    "title": "Central Bank of India"
+                  },
+                  {
+                    "title": "HDFC Bank"
+                  },
+                  {
+                    "title": "ICICI Bank"
+                  },
+                  {
+                    "title": "IDBI Bank"
+                  },
+                  {
+                    "title": "Indian Bank (Allahabad Bank)"
+                  },
+                  {
+                    "title": "Indian Overseas Bank"
+                  },
+                  {
+                    "title": "Indus Ind Bank"
+                  },
+                  {
+                    "title": "J&K Bank"
+                  },
+                  {
+                    "title": "Karnataka Bank"
+                  },
+                  {
+                    "title": "Kotak Mahindra Bank"
+                  },
+                  {
+                    "title": "Nainital Bank"
+                  },
+                  {
+                    "title": "Punjab National Bank"
+                  },
+                  {
+                    "title": "Prathima Bank"
+                  },
+                  {
+                    "title": "Punjab & Sind Bank"
+                  },
+                  {
+                    "title": "State Bank of India"
+                  },
+                  {
+                    "title": "South Indian Bank"
+                  },
+                  {
+                    "title": "The Federal Bank"
+                  },
+                  {
+                    "title": "UCO Bank"
+                  },
+                  {
+                    "title": "Union Bank of India"
+                  },
+                  {
+                    "title": "UP Cooperative Bank"
+                  },
+                  {
+                    "title": "YES Bank"
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "title": "2018-19",
+            "parent_question": "loan_amount_2018",
+            "is_lesser": 1,
+            "type": "dropdown",
+            "readonly": false,
+            "required": true,
+            "answer": {
+              "options": {
+                "option": [
+                  {
+                    "title": "Aryavart Gramin Bank"
+                  },
+                  {
+                    "title": "Axis Bank"
+                  },
+                  {
+                    "title": "Bandhan Bank"
+                  },
+                  {
+                    "title": "Bank of Baroda"
+                  },
+                  {
+                    "title": "Bank of India"
+                  },
+                  {
+                    "title": "Bank of Maharastra"
+                  },
+                  {
+                    "title": "Baroda UP Gramin Bank"
+                  },
+                  {
+                    "title": "Canara Bank"
+                  },
+                  {
+                    "title": "Central Bank of India"
+                  },
+                  {
+                    "title": "HDFC Bank"
+                  },
+                  {
+                    "title": "ICICI Bank"
+                  },
+                  {
+                    "title": "IDBI Bank"
+                  },
+                  {
+                    "title": "Indian Bank (Allahabad Bank)"
+                  },
+                  {
+                    "title": "Indian Overseas Bank"
+                  },
+                  {
+                    "title": "Indus Ind Bank"
+                  },
+                  {
+                    "title": "J&K Bank"
+                  },
+                  {
+                    "title": "Karnataka Bank"
+                  },
+                  {
+                    "title": "Kotak Mahindra Bank"
+                  },
+                  {
+                    "title": "Nainital Bank"
+                  },
+                  {
+                    "title": "Punjab National Bank"
+                  },
+                  {
+                    "title": "Prathima Bank"
+                  },
+                  {
+                    "title": "Punjab & Sind Bank"
+                  },
+                  {
+                    "title": "State Bank of India"
+                  },
+                  {
+                    "title": "South Indian Bank"
+                  },
+                  {
+                    "title": "The Federal Bank"
+                  },
+                  {
+                    "title": "UCO Bank"
+                  },
+                  {
+                    "title": "Union Bank of India"
+                  },
+                  {
+                    "title": "UP Cooperative Bank"
+                  },
+                  {
+                    "title": "YES Bank"
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "title": "2019-20",
+            "parent_question": "loan_amount_2019",
+            "is_lesser": 1,
+            "type": "dropdown",
+            "readonly": false,
+            "required": true,
+            "answer": {
+              "options": {
+                "option": [
+                  {
+                    "title": "Aryavart Gramin Bank"
+                  },
+                  {
+                    "title": "Axis Bank"
+                  },
+                  {
+                    "title": "Bandhan Bank"
+                  },
+                  {
+                    "title": "Bank of Baroda"
+                  },
+                  {
+                    "title": "Bank of India"
+                  },
+                  {
+                    "title": "Bank of Maharastra"
+                  },
+                  {
+                    "title": "Baroda UP Gramin Bank"
+                  },
+                  {
+                    "title": "Canara Bank"
+                  },
+                  {
+                    "title": "Central Bank of India"
+                  },
+                  {
+                    "title": "HDFC Bank"
+                  },
+                  {
+                    "title": "ICICI Bank"
+                  },
+                  {
+                    "title": "IDBI Bank"
+                  },
+                  {
+                    "title": "Indian Bank (Allahabad Bank)"
+                  },
+                  {
+                    "title": "Indian Overseas Bank"
+                  },
+                  {
+                    "title": "Indus Ind Bank"
+                  },
+                  {
+                    "title": "J&K Bank"
+                  },
+                  {
+                    "title": "Karnataka Bank"
+                  },
+                  {
+                    "title": "Kotak Mahindra Bank"
+                  },
+                  {
+                    "title": "Nainital Bank"
+                  },
+                  {
+                    "title": "Punjab National Bank"
+                  },
+                  {
+                    "title": "Prathima Bank"
+                  },
+                  {
+                    "title": "Punjab & Sind Bank"
+                  },
+                  {
+                    "title": "State Bank of India"
+                  },
+                  {
+                    "title": "South Indian Bank"
+                  },
+                  {
+                    "title": "The Federal Bank"
+                  },
+                  {
+                    "title": "UCO Bank"
+                  },
+                  {
+                    "title": "Union Bank of India"
+                  },
+                  {
+                    "title": "UP Cooperative Bank"
+                  },
+                  {
+                    "title": "YES Bank"
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "title": "2020-21",
+            "parent_question": "loan_amount_2020",
+            "is_lesser": 1,
+            "type": "dropdown",
+            "readonly": false,
+            "required": true,
+            "answer": {
+              "options": {
+                "option": [
+                  {
+                    "title": "Aryavart Gramin Bank"
+                  },
+                  {
+                    "title": "Axis Bank"
+                  },
+                  {
+                    "title": "Bandhan Bank"
+                  },
+                  {
+                    "title": "Bank of Baroda"
+                  },
+                  {
+                    "title": "Bank of India"
+                  },
+                  {
+                    "title": "Bank of Maharastra"
+                  },
+                  {
+                    "title": "Baroda UP Gramin Bank"
+                  },
+                  {
+                    "title": "Canara Bank"
+                  },
+                  {
+                    "title": "Central Bank of India"
+                  },
+                  {
+                    "title": "HDFC Bank"
+                  },
+                  {
+                    "title": "ICICI Bank"
+                  },
+                  {
+                    "title": "IDBI Bank"
+                  },
+                  {
+                    "title": "Indian Bank (Allahabad Bank)"
+                  },
+                  {
+                    "title": "Indian Overseas Bank"
+                  },
+                  {
+                    "title": "Indus Ind Bank"
+                  },
+                  {
+                    "title": "JK Bank"
+                  },
+                  {
+                    "title": "Karnataka Bank"
+                  },
+                  {
+                    "title": "Kotak Mahindra Bank"
+                  },
+                  {
+                    "title": "Nainital Bank"
+                  },
+                  {
+                    "title": "Punjab National Bank"
+                  },
+                  {
+                    "title": "Prathima Bank"
+                  },
+                  {
+                    "title": "Punjab AND Sind Bank"
+                  },
+                  {
+                    "title": "State Bank of India"
+                  },
+                  {
+                    "title": "South Indian Bank"
+                  },
+                  {
+                    "title": "The Federal Bank"
+                  },
+                  {
+                    "title": "UCO Bank"
+                  },
+                  {
+                    "title": "Union Bank of India"
+                  },
+                  {
+                    "title": "UP Cooperative Bank"
+                  },
+                  {
+                    "title": "YES Bank"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      {
+        "title": "Details of the Bank Credit Facilitation and Utilization",
+        "description": "Scheme Name under which it was availed",
+        "question":[
+        {
+          "title": "Scheme",
+          "type": "dropdown",
+          "readonly": false,
+          "answer": {
+            "options": {
+              "option": [
+                {
+                  "title": "ASPIRE"
+                },
+                {
+                  "title": "ATI"
+                },
+                {
+                  "title": "CLCS & TU"
+                },
+                {
+                  "title": "CGTMSE"
+                },
+                {
+                  "title": "Coir Upgradation"
+                },
+                {
+                  "title": "Design Clinic"
+                },
+                {
+                  "title": "Digital MSME"
+                },
+                {
+                  "title": "ESDP"
+                },
+                {
+                  "title": "GVY"
+                },
+                {
+                  "title": "IC"
+                },
+                {
+                  "title": "Incubators"
+                },
+                {
+                  "title": "IPR"
+                },
+                {
+                  "title": "ISEC"
+                },
+                {
+                  "title": "Lean Manufacturing"
+                },
+                {
+                  "title": "MSE-CDP"
+                },
+                {
+                  "title": "MRIGI"
+                },
+                {
+                  "title": "PMEGP/MUDRA"
+                },
+                {
+                  "title": "PMS"
+                },
+                {
+                  "title": "Rojgar Yukt Gaon"
+                },
+                {
+                  "title": "Skills Upgradation"
+                },
+                {
+                  "title": "SC-ST HUB"
+                },
+                {
+                  "title": "SFURTI"
+                },
+                {
+                  "title": "ZED"
+                }
+              ]
+            }
+          }
+        }
+        ]
+      },
+      {
+        "title": "Details of the Bank Credit Facilitation and Utilization",
+        "description": "Loan Amount Utilization",
+        "question": [
+          {
+            "title": "2016-17",
+            "unique_identifier": "loan_amount_utilization_2016_17",
+            "parent_question": "loan_amount_2016",
+            "is_lesser": 1,
+            "required": true,
+            "type": "checkbox",
+            "readonly": false,
+            "answer": {
+              "options": {
+                "option": [
+                  {
+                    "title": "Business Expansion"
+                  },
+                  {
+                    "title": "Land/Assets acquisition"
+                  },
+                  {
+                    "title": "Procuring raw materials"
+                  },
+                  {
+                    "title": "Disbursing Salaries and wages"
+                  },
+                  {
+                    "title": "Marketing and Distribution"
+                  },
+                  {
+                    "title": "Other"
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "parent_question": "loan_amount_utilization_2016_17",
+            "show_when": "Other",
+            "title": "If Other Please specify",
+            "type": "text",
+            "readonly": false,
+            "required": true,
+            "answer": ""
+          },
+          {
+            "title": "2017-18",
+            "unique_identifier": "loan_amount_utilization_2017_18",
+            "parent_question": "loan_amount_2017",
+            "is_lesser": 1,
+            "required": true,
+            "type": "checkbox",
+            "readonly": false,
+            "answer": {
+              "options": {
+                "option": [
+                  {
+                    "title": "Business Expansion"
+                  },
+                  {
+                    "title": "Land/Assets acquisition"
+                  },
+                  {
+                    "title": "Procuring raw materials"
+                  },
+                  {
+                    "title": "Disbursing Salaries and wages"
+                  },
+                  {
+                    "title": "Marketing and Distribution"
+                  },
+                  {
+                    "title": "Other"
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "parent_question": "loan_amount_utilization_2017_18",
+            "show_when": "Other",
+            "title": "If Other Please specify",
+            "type": "text",
+            "readonly": false,
+            "required": true,
+            "answer": ""
+          },
+          {
+            "title": "2018-19",
+            "parent_question": "loan_amount_2018",
+            "unique_identifier": "loan_amount_utilization_2018_19",
+            "is_lesser": 1,
+            "required": [
+              true,
+              true
+            ],
+            "type": "checkbox",
+            "readonly": false,
+            "answer": {
+              "options": {
+                "option": [
+                  {
+                    "title": "Business Expansion"
+                  },
+                  {
+                    "title": "Land/Assets acquisition"
+                  },
+                  {
+                    "title": "Procuring raw materials"
+                  },
+                  {
+                    "title": "Disbursing Salaries and wages"
+                  },
+                  {
+                    "title": "Marketing and Distribution"
+                  },
+                  {
+                    "title": "Other"
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "parent_question": "loan_amount_utilization_2018_19",
+            "show_when": "Other",
+            "title": "If Other Please specify",
+            "type": "text",
+            "readonly": false,
+            "required": true,
+            "answer": ""
+          },
+          {
+            "title": "2019-20",
+            "parent_question": "loan_amount_2019",
+            "unique_identifier": "loan_amount_utilization_2019_20",
+            "is_lesser": 1,
+            "required": true,
+            "type": "checkbox",
+            "readonly": false,
+            "answer": {
+              "options": {
+                "option": [
+                  {
+                    "title": "Business Expansion"
+                  },
+                  {
+                    "title": "Land/Assets acquisition"
+                  },
+                  {
+                    "title": "Procuring raw materials"
+                  },
+                  {
+                    "title": "Disbursing Salaries and wages"
+                  },
+                  {
+                    "title": "Marketing and Distribution"
+                  },
+                  {
+                    "title": "Other"
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "parent_question": "loan_amount_utilization_2019_20",
+            "show_when": "Other",
+            "title": "If Other Please specify",
+            "type": "text",
+            "readonly": false,
+            "required": true,
+            "answer": ""
+          },
+          {
+            "title": "2020-21",
+            "unique_identifier": "loan_amount_utilization_2020_21",
+            "parent_question": "loan_amount_2020",
+            "is_lesser": 1,
+            "type": "checkbox",
+            "readonly": false,
+            "required": true,
+            "answer": {
+              "options": {
+                "option": [
+                  {
+                    "title": "Business Expansion"
+                  },
+                  {
+                    "title": "Land/Assets acquisition"
+                  },
+                  {
+                    "title": "Procuring raw materials"
+                  },
+                  {
+                    "title": "Disbursing Salaries and wages"
+                  },
+                  {
+                    "title": "Marketing and Distribution"
+                  },
+                  {
+                    "title": "Other"
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "parent_question": "loan_amount_utilization_2020_21",
+            "show_when": "Other",
+            "title": "If Other Please specify",
+            "type": "text",
+            "readonly": false,
+            "required": true,
+            "answer": ""
+          }
+        ]
+      },
+      {
+        "title": "Photos",
+        "description": "",
+        "question": [
+          {
+            "title": "Person interviewed",
+            "type": "photo",
+            "readonly": false,
+            "required": true,
+            "answer": ""
+          },
+          {
+            "title": "Signboard of Company",
+            "type": "photo",
+            "readonly": false,
+            "required": true,
+            "answer": ""
+          },
+          {
+            "title": "Picture of business operation",
+            "type": "photo",
+            "readonly": false,
+            "required": true,
+            "answer": ""
+          }
+        ]
+      }
+    ]
+  }
+}
